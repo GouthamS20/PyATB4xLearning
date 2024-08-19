@@ -27,5 +27,5 @@ B = 20
 sum = A + B
 sum = sum + 1
 print(sum)
-sum + 2 #InterviewTip: Here the value is only incremented but it is not being stored on the variable, to store is you need to assign it
+sum + 2 #InterviewTip: Here the value is only incremented but, it is not being stored on the variable, to store is you need to assign it
 
