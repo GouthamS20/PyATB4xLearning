@@ -11,6 +11,13 @@ Types of user defined functions:
 3. Function with no return type and with default parameters
 4. Function with return type and with parameters
 
+If we aren't sure how many parameters we need for a function we can use the following
+
+*args is used to pass a non-keyworded, variable-length argument list to a function. It allows you to pass any number of
+positional arguments as a tuple
+**kwargs is used to pass a keyworded, variable-length argument dictionary to a function. It allows you to pass any number of
+keyword arguments as a dictionary.
+
 """
 
 #User defined function # with no return type and no parameters
@@ -43,3 +50,13 @@ def func_with_arg_return_type(a,b):
 
 r = func_with_arg_return_type(44,54)
 print(r)
+
+def my_function(*args, **kwargs):
+    print("Positional Arguments:")
+    for arg in args:
+        print(arg)
+    print("Keyword Arguments:")
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+my_function('Hello', 'World', name='John', age=30)
